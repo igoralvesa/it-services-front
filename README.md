@@ -6,17 +6,17 @@ Referência: especificação `projeto_av1.pdf`. Projeto: front-end apenas (HTML/
 
 | Requisito | Status |
 |-----------|--------|
-| Header com imagem de logo | OK — placeholder + TODO |
+| Header com imagem de logo | OK — marca Arrecifes Tecnologia |
 | Frase de apresentação | OK — tagline |
 | Links: Login, Cadastro; terceiro (serviços) só se logado | OK — `layout.js` + classe `is-hidden` |
-| Texto breve história | OK — placeholder |
+| Texto breve história | OK — conteúdo institucional preenchido |
 | Vídeo YouTube em streaming (~1 min sugerido no PDF) | OK — iframe (substituir URL pelo institucional) |
-| Galeria ≥ 4 fotos | OK — placeholders |
+| Galeria ≥ 4 fotos | OK — imagens ilustrativas com descrições coerentes |
 | Seção livre serviços de TI (estático, sem vídeo) | OK — cards + grid |
 | Tabela 3 fundadores (cargo, nome, CV) | OK |
 | Footer: lista 3 contatos (fixo, zap, mailto) | OK |
 | Endereço em texto | OK |
-| Figuras formas de pagamento | OK — placeholders |
+| Figuras formas de pagamento | OK — PIX, cartão e boleto |
 | HTML: sem tags de estilo deprecated, blocos semânticos | OK |
 | Texto diferenciado do padrão | OK — `<mark>` no intro |
 | Tabela como parte do layout | OK — `table.layout-table` |
@@ -31,7 +31,7 @@ Referência: especificação `projeto_av1.pdf`. Projeto: front-end apenas (HTML/
 | Requisito | Status |
 |-----------|--------|
 | Identificação “Login de clientes” | OK |
-| Logo | OK — placeholder |
+| Logo | OK — marca Arrecifes Tecnologia |
 | Link troca de senha | OK |
 | Campos login e senha | OK |
 | Botões Realizar Login e Limpar | OK |
@@ -65,7 +65,7 @@ Referência: especificação `projeto_av1.pdf`. Projeto: front-end apenas (HTML/
 | Validações nome, CPF com máscara e DV, data, idade ≥18, telefone opcional BR | OK |
 | Regras de senha iguais à troca de senha | OK |
 | Incluir / Limpar / Voltar | OK |
-| Persistência mock de usuário | OK — `localStorage` (senha em texto: **apenas demonstração**) |
+| Persistência local de usuário | OK — `localStorage` (senha em texto: **apenas protótipo acadêmico**) |
 
 ## Página 5 — Solicitações (`services.html` + `services.js`)
 
@@ -75,7 +75,7 @@ Referência: especificação `projeto_av1.pdf`. Projeto: front-end apenas (HTML/
 | Seção com nome e e-mail do usuário | OK — sessão + fallback texto fixo |
 | Tabela pedidos com colunas obrigatórias | OK |
 | Ordem crescente por data do pedido | OK |
-| Linhas iniciais fictícias | OK — seed ao primeiro acesso |
+| Linhas iniciais de exemplo | OK — seed ao primeiro acesso |
 | Excluir linha funcional | OK |
 | Combo serviços, preço e prazo por serviço | OK |
 | Data prevista = hoje + prazo; status inicial “EM ELABORAÇÃO” | OK |
@@ -92,7 +92,7 @@ Referência: especificação `projeto_av1.pdf`. Projeto: front-end apenas (HTML/
 
 ## Simplificações / observações
 
-- **Segurança:** autenticação e senhas são simuladas no navegador; não usar em produção.
+- **Segurança:** autenticação e senhas funcionam apenas no navegador; não usar em produção.
 - **Vídeo YouTube:** está como exemplo; trocar pelo vídeo institucional final.
 - **Login sem cadastro prévio:** ainda passa na validação do PDF; sessão é criada com nome derivado do e-mail — fluxo completo recomendado: cadastrar → login com mesma senha.
 - **`history.back()`:** em Cadastro/Troca depende do histórico do navegador; há fallback na troca para `login.html` quando não há histórico.

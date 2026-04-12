@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solicitação de serviços de TI — Placeholder Tech</title>
+    <title>Solicitação de serviços de TI — Arrecifes Tecnologia</title>
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
@@ -12,16 +12,15 @@
     <header class="site-header">
       <div class="site-header__inner">
         <div class="site-branding">
-          <!-- TODO: replace logo -->
           <img
             class="site-logo"
-            src="https://placehold.co/112x112/e8eaf0/176c5c?text=LOGO"
-            alt="Área reservada para o logotipo da empresa"
+            src="assets/img/logo-arrecifes.svg"
+            alt="Logotipo da Arrecifes Tecnologia"
             width="48"
             height="48"
           />
           <div>
-            <span class="brand-name">Placeholder Tech LTDA</span>
+            <span class="brand-name">Arrecifes Tecnologia LTDA</span>
             <p class="site-tagline">Solicitação de serviços de TI</p>
           </div>
         </div>
@@ -37,22 +36,21 @@
     <main class="site-main">
       <h1 class="page-title">Carrinho de solicitações de serviços</h1>
       <p class="text-muted">
-        Página em seções únicas. Dados fictícios iniciais e persistência simulada apenas no
-        navegador (não é um servidor real).
+        Organize solicitações de suporte, acompanhe prazos e consulte o histórico de pedidos do cliente.
       </p>
 
       <section class="services-section card" aria-labelledby="user-panel-title">
         <h2 id="user-panel-title">Usuário logado</h2>
         <p>
           <span class="readonly-label">Nome:</span>
-          <span id="session-fullname">Cliente Exemplo</span>
+          <span id="session-fullname">Mariana Souza</span>
         </p>
         <p>
           <span class="readonly-label">Login (e-mail):</span>
-          <span id="session-email">cliente.exemplo@placeholder.com</span>
+          <span id="session-email">mariana.souza@email.com</span>
         </p>
         <p class="text-muted">
-          <!-- PDF: valores fixos permitidos; aqui lemos a sessão ou mostramos fallback. -->
+          Os dados são carregados da sessão ativa do navegador.
         </p>
       </section>
 
@@ -81,7 +79,7 @@
         <h2 id="new-request-title">Nova solicitação</h2>
         <form id="new-request-form" novalidate>
           <div class="form-group">
-            <label for="service-select">Servço de TI</label>
+            <label for="service-select">Serviço de TI</label>
             <select id="service-select" name="serviceId"></select>
           </div>
           <p>
@@ -105,7 +103,7 @@
 
     <footer class="site-footer site-footer--compact">
       <div class="site-footer__inner">
-        <p class="text-muted">&copy; Placeholder Tech — conteúdo fictício.</p>
+        <p class="text-muted">&copy; Arrecifes Tecnologia — solicitações de serviços de TI.</p>
       </div>
     </footer>
 

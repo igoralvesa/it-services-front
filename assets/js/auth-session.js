@@ -1,5 +1,5 @@
 /**
- * Mock client-side session and user storage — assignment demo only.
+ * Client-side session and user storage for the academic prototype.
  * NOT real authentication or secure storage.
  */
 

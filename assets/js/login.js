@@ -27,7 +27,7 @@ function handleLoginSubmit(event) {
   }
   if (hasError) return;
 
-  // Mock: if this e-mail is registered, the password must match (demo only).
+  // If this e-mail is registered locally, the password must match.
   var storedUser = findUserByEmail(email);
   if (storedUser) {
     if (storedUser.password !== password) {

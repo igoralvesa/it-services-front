@@ -1,8 +1,8 @@
 var SERVICE_CATALOG = [
-  { id: 'desk', name: 'Service Desk 8x5', price: 320.0, leadDays: 5 },
-  { id: 'cloud', name: 'Migração para nuvem', price: 1200.0, leadDays: 14 },
-  { id: 'security', name: 'Avaliação de segurança', price: 950.0, leadDays: 7 },
-  { id: 'dev', name: 'Desenvolvimento de integração', price: 2100.0, leadDays: 21 }
+  { id: 'desk', name: 'Service Desk mensal 8x5', price: 680.0, leadDays: 3 },
+  { id: 'cloud', name: 'Migração Microsoft 365', price: 1850.0, leadDays: 12 },
+  { id: 'security', name: 'Auditoria de segurança básica', price: 1250.0, leadDays: 7 },
+  { id: 'backup', name: 'Implantação de backup em nuvem', price: 980.0, leadDays: 6 }
 ];
 
 function formatBrazilianCurrency(value) {
@@ -53,19 +53,19 @@ function getExampleRequestRows() {
       id: 'seed-1',
       orderDateIso: '2025-01-10',
       requestNumber: 'REQ-5001',
-      serviceName: 'Backup gerenciado',
+      serviceName: 'Implantação de backup em nuvem',
       status: 'CONCLUÍDO',
-      price: 450.0,
-      expectedDateIso: '2025-01-20'
+      price: 980.0,
+      expectedDateIso: '2025-01-16'
     },
     {
       id: 'seed-2',
       orderDateIso: '2025-02-05',
       requestNumber: 'REQ-5002',
-      serviceName: 'Service Desk 8x5',
+      serviceName: 'Service Desk mensal 8x5',
       status: 'EM ANDAMENTO',
-      price: 320.0,
-      expectedDateIso: '2025-02-12'
+      price: 680.0,
+      expectedDateIso: '2025-02-08'
     }
   ];
 }
@@ -123,7 +123,7 @@ function updateServiceSummaryLabels() {
   var leadLabel = document.getElementById('label-lead');
   var expectedLabel = document.getElementById('label-expected-date');
   if (priceLabel) priceLabel.textContent = formatBrazilianCurrency(service.price);
-  if (leadLabel) leadLabel.textContent = service.leadDays + ' dias úteis (fixo de demonstração)';
+  if (leadLabel) leadLabel.textContent = service.leadDays + ' dias úteis';
   var expectedIso = addDaysToIsoDate(getTodayIsoDate(), service.leadDays);
   if (expectedLabel) expectedLabel.textContent = formatDateForBrazil(expectedIso);
 }
@@ -131,9 +131,9 @@ function updateServiceSummaryLabels() {
 function initServicesPage() {
   var session = getSession();
   var userEmail =
-    session && session.email ? session.email : 'cliente.exemplo@placeholder.com';
+    session && session.email ? session.email : 'mariana.souza@email.com';
   var userFullName =
-    session && session.fullName ? session.fullName : 'Cliente Exemplo';
+    session && session.fullName ? session.fullName : 'Mariana Souza';
 
   var sessionEmailLabel = document.getElementById('session-email');
   var sessionNameLabel = document.getElementById('session-fullname');

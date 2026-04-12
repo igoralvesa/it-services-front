@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112" role="img" aria-labelledby="title desc">
+  <title id="title">Arrecifes Tecnologia</title>
+  <desc id="desc">Monograma AT em formato geométrico.</desc>
+  <rect width="112" height="112" rx="18" fill="#0f3f46"/>
+  <path d="M24 74L42 30h11l18 44H58l-3-8H40l-3 8H24zm19-18h9l-4-12h-1l-4 12z" fill="#ffffff"/>
+  <path d="M64 40V30h30v10H84v34H74V40H64z" fill="#9be3dc"/>
+  <path d="M22 86h68" stroke="#e76f51" stroke-width="6" stroke-linecap="round"/>
+</svg>

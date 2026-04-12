@@ -20,7 +20,7 @@
   background: var(--color-accent);
   color: #fff;
   border-color: var(--color-accent);
-  box-shadow: 0 10px 22px rgba(15, 118, 110, 0.2);
+  box-shadow: 0 12px 24px rgba(0, 124, 137, 0.24);
 }
 
 .btn-primary:hover {
@@ -29,20 +29,20 @@
   text-decoration: none;
   color: #fff;
   transform: translateY(-1px);
-  box-shadow: 0 14px 28px rgba(15, 118, 110, 0.24);
+  box-shadow: 0 16px 30px rgba(0, 124, 137, 0.28);
 }
 
 .btn-secondary {
-  background: var(--color-surface);
-  color: var(--color-text);
-  border-color: var(--color-border);
+  background: #fff7f4;
+  color: #84412f;
+  border-color: rgba(231, 111, 81, 0.24);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .btn-secondary:hover {
-  background: var(--color-bg-accent);
+  background: #ffe9e1;
   text-decoration: none;
-  color: var(--color-text);
+  color: #673222;
   transform: translateY(-1px);
 }
 
@@ -66,7 +66,7 @@
   min-height: 2.7rem;
   padding: 0.65rem 0.8rem;
   font: inherit;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(23, 33, 38, 0.14);
   border-radius: var(--radius-sm);
   background: var(--color-surface);
   box-shadow: inset 0 1px 2px rgba(17, 24, 39, 0.03);
@@ -78,7 +78,7 @@
 .form-group textarea:focus {
   outline: none;
   background: #fff;
-  border-color: rgba(15, 118, 110, 0.55);
+  border-color: rgba(0, 124, 137, 0.6);
   box-shadow: 0 0 0 3px var(--color-accent-soft);
 }
 
@@ -92,11 +92,13 @@
 .auth-card {
   margin: 1.5rem auto 0;
   max-width: 520px;
+  border-top: 4px solid var(--color-accent);
 }
 
 .auth-wide {
   margin: 1.5rem auto 0;
   max-width: 640px;
+  border-top: 4px solid var(--color-accent);
 }
 
 .table-requests,
@@ -108,7 +110,7 @@
   border-radius: var(--radius-sm);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(0, 124, 137, 0.14);
 }
 
 .table-requests th,
@@ -116,7 +118,7 @@
 .table-founders th,
 .table-founders td {
   border: 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(23, 33, 38, 0.09);
   padding: 0.78rem 0.9rem;
   text-align: left;
   font-size: 0.9rem;
@@ -124,7 +126,7 @@
 
 .table-requests thead,
 .table-founders thead {
-  background: #eef3f6;
+  background: #e5f3f2;
 }
 
 .table-requests thead th,
@@ -133,17 +135,17 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0;
-  color: var(--color-muted);
+  color: var(--color-accent-strong);
 }
 
 .table-requests tbody tr:nth-child(even),
 .table-founders tbody tr:nth-child(even) {
-  background: rgba(15, 118, 110, 0.025);
+  background: rgba(0, 124, 137, 0.035);
 }
 
 .table-requests tbody tr:hover,
 .table-founders tbody tr:hover {
-  background: rgba(15, 118, 110, 0.06);
+  background: rgba(231, 111, 81, 0.08);
 }
 
 .table-requests tbody tr:last-child td,
@@ -162,9 +164,16 @@
   height: 158px;
   object-fit: cover;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(0, 124, 137, 0.16);
   box-shadow: var(--shadow-sm);
   filter: saturate(1.04) contrast(1.02);
+  transition: filter 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gallery img:hover {
+  filter: saturate(1.12) contrast(1.05);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 .services-grid {
@@ -174,7 +183,7 @@
 }
 
 .services-grid .card {
-  border-top: 4px solid var(--color-accent);
+  border-top: 4px solid var(--color-warm);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -212,7 +221,7 @@
 
 /* Fieldset / radio clusters on register page */
 fieldset.form-group {
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(0, 124, 137, 0.14);
   border-radius: var(--radius-sm);
   padding: 0.75rem 1rem 1rem;
   margin: 0 0 1.1rem;
@@ -240,7 +249,7 @@ fieldset.form-group label {
   padding: 0.9rem 1rem;
   background: var(--color-surface-elevated);
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(0, 124, 137, 0.14);
   display: block;
   line-height: 1.5;
   max-width: 680px;
@@ -261,14 +270,14 @@ fieldset.form-group label {
 .readonly-label {
   font-weight: 700;
   font-size: 0.875rem;
-  color: var(--color-muted);
+  color: var(--color-accent-strong);
   margin-right: 0.35rem;
 }
 
 .table-scroll {
   overflow-x: auto;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(0, 124, 137, 0.14);
   box-shadow: var(--shadow-sm);
 }
 
