@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placeholder Tech — Apresentação</title>
+    <!-- TODO: replace company name (title and branding) -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <style>
+      /* Estilos locais + seletor por id (requisito PDF) */
+      #page-intro {
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+      .layout-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 1.25rem;
+      }
+      .layout-table td {
+        vertical-align: top;
+        padding-right: 1rem;
+      }
+      .video-wrap {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .video-wrap iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-branding">
+          <!-- TODO: replace logo — use imagem final da empresa -->
+          <img
+            class="site-logo"
+            src="https://placehold.co/112x112/e8eaf0/176c5c?text=LOGO"
+            alt="Área reservada para o logotipo da empresa"
+            width="48"
+            height="48"
+          />
+          <div>
+            <span class="brand-name">Placeholder Tech LTDA</span>
+            <p class="site-tagline">
+              Soluções de TI sob medida para o seu negócio — conteúdo de exemplo.
+            </p>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="login.html">Login</a>
+          <a href="register.html">Cadastro</a>
+          <a href="services.html" id="nav-services" class="is-hidden" aria-hidden="true"
+            >Solicitação de serviços</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <h1 class="page-title">Conheça a Placeholder Tech</h1>
+      <p id="page-intro" class="text-muted" style="margin-bottom: 2rem">
+        <!-- TODO: replace company data — texto institucional final -->
+        Página estática de <mark>apresentação da empresa</mark> (nome e dados são placeholders).
+      </p>
+
+      <!-- Parte do layout organizado com tabela (requisito PDF) -->
+      <table class="layout-table">
+        <tr>
+          <td>
+            <section aria-labelledby="history-title">
+              <h2 id="history-title">Breve história</h2>
+              <p>
+                Fundada em 20XX, a Placeholder Tech nasceu com o objetivo de oferecer serviços de
+                infraestrutura, suporte e desenvolvimento para pequenas e médias empresas. Nossa
+                trajetória combina experiência técnica com atendimento consultivo — este parágrafo
+                é fictício até a definição do conteúdo final.
+              </p>
+              <p class="text-muted">
+                Texto expandido para demonstrar painel com rolagem na coluna ao lado.
+              </p>
+            </section>
+          </td>
+          <td style="width: 36%">
+            <section aria-labelledby="notes-title">
+              <h2 id="notes-title">Notas internas (demo)</h2>
+              <div class="scroll-panel">
+                <p>
+                  <!-- TODO: replace company data -->
+                  Conteúdo longo simulado: políticas de atendimento, SLA de exemplo, horários
+                  comerciais placeholder, canais de suporte, e observações gerais sobre o portfólio
+                  de serviços. Role esta área verticalmente para ver o comportamento da barra de
+                  rolagem automática.
+                </p>
+                <p>
+                  Mais linhas para garantir overflow: equipe distribuída, processos de onboarding,
+                  materiais de FAQ, links internos (fictícios) e descrições resumidas de projetos de
+                  exemplo que serão substituídos pela redação oficial.
+                </p>
+                <p>
+                  Lorem ipsum adicionais: documentação, treinamentos, política de privacidade em
+                  construção e informações de contato alternativas — tudo placeholder.
+                </p>
+              </div>
+            </section>
+          </td>
+        </tr>
+      </table>
+
+      <section aria-labelledby="video-title">
+        <h2 id="video-title">Vídeo institucional (streaming YouTube)</h2>
+        <p class="text-muted">
+          Vídeo de exemplo hospedado no YouTube (substitua pelo vídeo oficial de ~1 min).
+        </p>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            title="Vídeo institucional da empresa (exemplo no YouTube)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section aria-labelledby="gallery-title" style="margin-top: 2rem">
+        <h2 id="gallery-title">Galeria — instalações e equipe</h2>
+        <p class="text-muted">Imagens placeholder; substitua por fotos reais (mínimo 4).</p>
+        <div class="gallery">
+          <!-- TODO: replace gallery images -->
+          <img src="https://picsum.photos/seed/g1/400/300" alt="Foto placeholder 1 das instalações" />
+          <img src="https://picsum.photos/seed/g2/400/300" alt="Foto placeholder 2 da equipe" />
+          <img src="https://picsum.photos/seed/g3/400/300" alt="Foto placeholder 3 do escritório" />
+          <img src="https://picsum.photos/seed/g4/400/300" alt="Foto placeholder 4 de evento interno" />
+        </div>
+      </section>
+
+      <!-- Layout em grid para serviços (requisito PDF: técnica de layout) -->
+      <section aria-labelledby="services-title" style="margin-top: 2rem">
+        <h2 id="services-title">Principais serviços de TI</h2>
+        <p class="text-muted">Apresentação estática (sem vídeo) — textos de exemplo.</p>
+        <div class="layout-grid layout-grid--two" style="margin-top: 1rem">
+          <div class="services-grid">
+            <article class="card">
+              <h3>Suporte e Service Desk</h3>
+              <p>Atendimento remoto e presencial para estações, rede e periféricos — placeholder.</p>
+            </article>
+            <article class="card">
+              <h3>Infraestrutura e nuvem</h3>
+              <p>Planejamento, backup e ambientes híbridos descritos aqui de forma genérica.</p>
+            </article>
+            <article class="card">
+              <h3>Desenvolvimento sob demanda</h3>
+              <p>Pequenas integrações, automações e melhorias em sistemas legados (texto fictício).</p>
+            </article>
+          </div>
+          <aside class="card" aria-label="Resumo">
+            <h3>Destaque</h3>
+            <p class="text-muted">
+              Esta coluna usa grid responsivo ao lado de cards de serviços para manter o layout
+              organizado e coerente com as demais páginas.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section aria-labelledby="founders-title" style="margin-top: 2rem">
+        <h2 id="founders-title">Fundadores</h2>
+        <p class="text-muted"><!-- TODO: replace company data --> Dados fictícios para demonstração.</p>
+        <table class="table-founders">
+          <thead>
+            <tr>
+              <th scope="col">Cargo</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Breve CV</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Diretora de Operações</td>
+              <td>Ana Placeholder</td>
+              <td>15 anos em gestão de TI; foco em processos e qualidade de serviço (exemplo).</td>
+            </tr>
+            <tr>
+              <td>Diretor Técnico</td>
+              <td>Bruno Sample</td>
+              <td>Arquiteto de soluções; experiência em nuvem e segurança (texto fictício).</td>
+            </tr>
+            <tr>
+              <td>Head de Relacionamento</td>
+              <td>Carla Exemplo</td>
+              <td>Atuação comercial e CS; pós-graduação em gestão (placeholder).</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <h2 class="page-title">Contato e localização</h2>
+        <div class="layout-grid layout-grid--two">
+          <div>
+            <h3>Contatos</h3>
+            <ul>
+              <li>Telefone fixo: <a href="tel:+5511-0000-0000">(11) 0000-0000</a> <!-- TODO: replace company data --></li>
+              <li>WhatsApp: <a href="https://wa.me/5511999999999" rel="noopener">(11) 99999-9999</a></li>
+              <li>E-mail: <a href="mailto:contato@placeholder-tech.example">contato@placeholder-tech.example</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Endereço</h3>
+            <p>
+              <!-- TODO: replace company data -->
+              Av. Fictícia, 1000 — Sala 0 — Bairro Exemplo — São Paulo/SP — CEP 00000-000
+            </p>
+          </div>
+        </div>
+        <section aria-labelledby="pay-title" style="margin-top: 1.5rem">
+          <h3 id="pay-title">Formas de pagamento (ilustração)</h3>
+          <div class="payment-methods">
+            <!-- TODO: replace static payment figures with final assets -->
+            <figure>PIX</figure>
+            <figure>Cartão</figure>
+            <figure>Boleto</figure>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+    <script src="assets/js/auth-session.js"></script>
+    <script src="assets/js/layout.js"></script>
+  </body>
+</html>

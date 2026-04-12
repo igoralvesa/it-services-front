@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login de clientes — Placeholder Tech</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-branding">
+          <!-- TODO: replace logo -->
+          <img
+            class="site-logo"
+            src="https://placehold.co/112x112/e8eaf0/176c5c?text=LOGO"
+            alt="Área reservada para o logotipo da empresa"
+            width="48"
+            height="48"
+          />
+          <div>
+            <span class="brand-name">Placeholder Tech LTDA</span>
+            <p class="site-tagline">Login de clientes</p>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="register.html">Cadastro</a>
+          <a href="services.html" id="nav-services" class="is-hidden" aria-hidden="true"
+            >Solicitação de serviços</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <h1 class="page-title">Login de clientes</h1>
+      <p class="text-muted">
+        <a href="change-password.html">Esqueci / trocar senha</a>
+        — link para a página de troca de senha.
+      </p>
+
+      <div class="card auth-card">
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label for="login-email">Login (e-mail)</label>
+            <input type="email" id="login-email" name="email" autocomplete="username" required />
+            <p id="login-email-feedback" class="form-feedback" role="alert"></p>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Senha</label>
+            <input
+              type="password"
+              id="login-password"
+              name="password"
+              autocomplete="current-password"
+              required
+            />
+            <p id="login-password-feedback" class="form-feedback" role="alert"></p>
+          </div>
+          <p class="text-muted">
+            Não tem cadastro?
+            <a href="register.html">Cadastre-se</a>
+          </p>
+          <div class="form-group form-actions">
+            <button type="submit" class="btn btn-primary" id="login-submit">Realizar Login</button>
+            <button type="button" class="btn btn-secondary" id="login-clear">Limpar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer site-footer--compact">
+      <div class="site-footer__inner">
+        <p class="text-muted">&copy; Placeholder Tech — conteúdo fictício.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/auth-session.js"></script>
+    <script src="assets/js/password-validation.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de clientes — Placeholder Tech</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-branding">
+          <!-- TODO: replace logo -->
+          <img
+            class="site-logo"
+            src="https://placehold.co/112x112/e8eaf0/176c5c?text=LOGO"
+            alt="Área reservada para o logotipo da empresa"
+            width="48"
+            height="48"
+          />
+          <div>
+            <span class="brand-name">Placeholder Tech LTDA</span>
+            <p class="site-tagline">Cadastro de clientes</p>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="login.html">Login</a>
+          <a href="services.html" id="nav-services" class="is-hidden" aria-hidden="true"
+            >Solicitação de serviços</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <h1 class="page-title">Cadastro de clientes</h1>
+
+      <div class="card auth-wide">
+        <form id="register-form" novalidate>
+          <div class="form-group">
+            <label for="register-email">E-mail (login)</label>
+            <input type="email" id="register-email" name="email" autocomplete="email" required />
+            <p id="register-email-feedback" class="form-feedback" role="alert"></p>
+          </div>
+          <div class="form-group">
+            <label for="register-password">Senha</label>
+            <input type="password" id="register-password" name="password" autocomplete="new-password" />
+            <p id="register-password-feedback" class="form-feedback" role="alert"></p>
+          </div>
+          <div class="form-group">
+            <label for="register-password-confirm">Confirmação de senha</label>
+            <input type="password" id="register-password-confirm" name="passwordConfirm" autocomplete="new-password" />
+            <p id="register-password-confirm-feedback" class="form-feedback" role="alert"></p>
+          </div>
+          <div class="form-group">
+            <label>Instruções de senha</label>
+            <output class="password-hint" id="register-password-hint" for="register-password"></output>
+          </div>
+          <div class="form-group">
+            <label for="register-name">Nome completo</label>
+            <input type="text" id="register-name" name="fullName" autocomplete="name" />
+            <p id="register-name-feedback" class="form-feedback" role="alert"></p>
+          </div>
+          <div class="form-group">
+            <label for="register-cpf">CPF</label>
+            <input type="text" id="register-cpf" name="cpf" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" />
+            <p id="register-cpf-feedback" class="form-feedback" role="alert"></p>
+          </div>
+          <div class="form-group">
+            <label for="register-birth">Data de nascimento</label>
+            <input type="date" id="register-birth" name="birthDate" />
+            <p id="register-birth-feedback" class="form-feedback" role="alert"></p>
+          </div>
+          <div class="form-group">
+            <label for="register-phone">Telefone celular / WhatsApp (opcional)</label>
+            <input type="tel" id="register-phone" name="phone" autocomplete="tel" placeholder="(11) 91234-5678" />
+            <p id="register-phone-feedback" class="form-feedback" role="alert"></p>
+          </div>
+
+          <fieldset class="form-group">
+            <legend>Estado civil</legend>
+            <label><input type="radio" name="maritalStatus" value="single" checked /> Solteiro(a)</label>
+            <label><input type="radio" name="maritalStatus" value="married" /> Casado(a)</label>
+            <label><input type="radio" name="maritalStatus" value="divorced" /> Divorciado(a)</label>
+            <label><input type="radio" name="maritalStatus" value="widowed" /> Viúvo(a)</label>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="register-education">Escolaridade</label>
+            <select id="register-education" name="education">
+              <option value="elem-inc">1º grau incompleto</option>
+              <option value="elem-done">1º grau completo</option>
+              <option value="high-done" selected>2º grau completo</option>
+              <option value="undergrad">nível superior</option>
+              <option value="postgrad">pós-graduado</option>
+            </select>
+          </div>
+
+          <div class="form-group form-actions">
+            <button type="submit" class="btn btn-primary" id="register-submit">Incluir</button>
+            <button type="button" class="btn btn-secondary" id="register-clear">Limpar</button>
+            <button type="button" class="btn btn-secondary" id="register-back">Voltar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer site-footer--compact">
+      <div class="site-footer__inner">
+        <p class="text-muted">&copy; Placeholder Tech — conteúdo fictício.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/auth-session.js"></script>
+    <script src="assets/js/password-validation.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/register.js"></script>
+  </body>
+</html>

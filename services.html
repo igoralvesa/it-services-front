@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitação de serviços de TI — Placeholder Tech</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-branding">
+          <!-- TODO: replace logo -->
+          <img
+            class="site-logo"
+            src="https://placehold.co/112x112/e8eaf0/176c5c?text=LOGO"
+            alt="Área reservada para o logotipo da empresa"
+            width="48"
+            height="48"
+          />
+          <div>
+            <span class="brand-name">Placeholder Tech LTDA</span>
+            <p class="site-tagline">Solicitação de serviços de TI</p>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="login.html">Login</a>
+          <a href="register.html">Cadastro</a>
+          <a href="services.html" id="nav-services">Solicitação de serviços</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <h1 class="page-title">Carrinho de solicitações de serviços</h1>
+      <p class="text-muted">
+        Página em seções únicas. Dados fictícios iniciais e persistência simulada apenas no
+        navegador (não é um servidor real).
+      </p>
+
+      <section class="services-section card" aria-labelledby="user-panel-title">
+        <h2 id="user-panel-title">Usuário logado</h2>
+        <p>
+          <span class="readonly-label">Nome:</span>
+          <span id="session-fullname">Cliente Exemplo</span>
+        </p>
+        <p>
+          <span class="readonly-label">Login (e-mail):</span>
+          <span id="session-email">cliente.exemplo@placeholder.com</span>
+        </p>
+        <p class="text-muted">
+          <!-- PDF: valores fixos permitidos; aqui lemos a sessão ou mostramos fallback. -->
+        </p>
+      </section>
+
+      <section class="services-section" aria-labelledby="orders-title">
+        <h2 id="orders-title">Solicitações já realizadas</h2>
+        <p class="text-muted">Ordenadas pela data do pedido (crescente). Cada linha pode ser excluída.</p>
+        <div class="table-scroll">
+          <table class="table-requests" id="requests-table">
+            <thead>
+              <tr>
+                <th scope="col">Data do pedido</th>
+                <th scope="col">Nº da solicitação</th>
+                <th scope="col">Serviço de TI</th>
+                <th scope="col">Status</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Data prevista</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="requests-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="services-section card" aria-labelledby="new-request-title">
+        <h2 id="new-request-title">Nova solicitação</h2>
+        <form id="new-request-form" novalidate>
+          <div class="form-group">
+            <label for="service-select">Servço de TI</label>
+            <select id="service-select" name="serviceId"></select>
+          </div>
+          <p>
+            <span class="readonly-label">Preço:</span> <span id="label-price">—</span>
+          </p>
+          <p>
+            <span class="readonly-label">Prazo de atendimento:</span>
+            <span id="label-lead">—</span>
+          </p>
+          <p>
+            <span class="readonly-label">Data prevista de atendimento:</span>
+            <span id="label-expected-date">—</span>
+          </p>
+          <p>
+            <span class="readonly-label">Status:</span> <span id="label-status">EM ELABORAÇÃO</span>
+          </p>
+          <button type="submit" class="btn btn-primary" id="btn-add-request">Incluir solicitação</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer site-footer--compact">
+      <div class="site-footer__inner">
+        <p class="text-muted">&copy; Placeholder Tech — conteúdo fictício.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/auth-session.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/services.js"></script>
+  </body>
+</html>
