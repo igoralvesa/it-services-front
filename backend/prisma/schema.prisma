@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  id            Int              @id @default(autoincrement())
+  email         String           @unique
+  password      String
+  fullName      String
+  cpf           String
+  birthDate     DateTime
+  phone         String?
+  maritalStatus String
+  education     String
+  requests      ServiceRequest[]
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+}
+
+model Service {
+  id        Int              @id @default(autoincrement())
+  name      String
+  price     Float
+  leadDays  Int
+  requests  ServiceRequest[]
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+}
+
+model ServiceRequest {
+  id           Int      @id @default(autoincrement())
+  requestNumber String
+  orderDate    DateTime
+  status       String
+  price        Float
+  expectedDate DateTime
+  serviceName  String
+  clientId     Int
+  serviceId    Int
+  client       Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  service      Service  @relation(fields: [serviceId], references: [id])
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
